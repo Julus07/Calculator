@@ -8,7 +8,7 @@ int chooseOperation()
     {
         printf("\x1B[2J\x1B[H");
         printf("[1] Addition | [2] Subtraktion | [3] Multiplikation | [4] Division | [5] Modulo\n");
-        printf("Choose an operation >> ");
+        printf("Choose an operation » ");
         scanf("%d", &operation);
         if (operation < 1 || operation > 5)
         {
@@ -21,7 +21,7 @@ int chooseOperation()
 double inputNumber()
 {
     double input;
-    printf("Input number >> ");
+    printf("Input number » ");
     scanf("%lf", &input);
     return input;
 }
@@ -31,19 +31,19 @@ double result(int operation, double num1, double num2)
     switch (operation)
     {
     case 1:
-        return (num1 + num2);
+        return (num2 + num1);
         break;
     case 2:
-        return (num1 - num2);
+        return (num2 - num1);
         break;
     case 3:
-        return (num1 * num2);
+        return (num2 * num1);
         break;
     case 4:
-        return (num1 / num2);
+        return (num2 / num1);
         break;
     case 5:
-        return ((int)num1 % (int)num2);
+        return ((int)num2 % (int)num1);
         break;
     }
 }
